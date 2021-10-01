@@ -52,14 +52,32 @@ export default {
         content: ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      }
+    ],
+    script: [
+      {
+        src: '/override-alert.js',
+        type: 'text/javascript',
+        body: true
+      }
+      /* {
+        src: '',
+        type: 'text/javascript',
+        body: true
+      } */
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     /* '@/assets/css/webflow.css',
     '@/assets/css/normalize.css',
-    '@/assets/css/nkechis-23rd.webflow.css',
+    '@/assets/css/project.webflow.css',
     '@/assets/css/main.css' */
   ],
 
