@@ -15,57 +15,33 @@
         }
       }">
       <div class="welcome">
-        NuxtJS x LocomotiveScroll x GSAP Boilerplate
+        Webflow - NuxtJS x LocomotiveScroll x GSAP Boilerplate
       </div>
       <div class="welcome">
-        NuxtJS x LocomotiveScroll x GSAP Boilerplate
+        Webflow - NuxtJS x LocomotiveScroll x GSAP Boilerplate
       </div>
       <div class="welcome">
-        NuxtJS x LocomotiveScroll x GSAP Boilerplate
+        Webflow - NuxtJS x LocomotiveScroll x GSAP Boilerplate
       </div>
     </LocomotiveScroll>
   </div>
 </template>
 
 <script>
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
-
 export default {
   data() {
-    return {
-
-    }
+    return {}
   },
 
   mounted() {
+    this.$nextTick(() => {
+      this.$initWebflow()
+    })
     this.$nuxt.$emit('update-locomotive')
-    this.initScrolltrigger()
+    this.$initScrolltrigger(this.$refs.scroller.locomotive)
   },
 
-  methods: {
-     initScrolltrigger () {
-      const locomotive = this.$refs.scroller.locomotive
-      locomotive.on('scroll', ScrollTrigger.update)
-      ScrollTrigger.scrollerProxy(locomotive.el, {
-        scrollTop (value) {
-          return arguments.length
-            ? locomotive.scrollTo(value, 0, 0)
-            : locomotive.scroll.instance.scroll.y
-        },
-        getBoundingClientRect () {
-          return {
-            top: 0,
-            left: 0,
-            width: window.innerWidth,
-            height: window.innerHeight
-          }
-        }
-      })
-    }
-  }
+  methods: {}
 }
 </script>
 

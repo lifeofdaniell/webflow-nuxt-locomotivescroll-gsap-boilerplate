@@ -84,7 +84,13 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/both',
-    '@/plugins/client'
+    '@/plugins/client',
+    '@/plugins/components',
+    '@/plugins/directives',
+    '@/plugins/filters',
+    '@/plugins/google-analytics',
+    '@/plugins/prototypes',
+    '@/plugins/webflow'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
