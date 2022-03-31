@@ -1,1 +1,1 @@
-# NuxtJS x LocomotiveScroll x GSAP Boilerplate
+# Webflow x NuxtJS x LocomotiveScroll x GSAP Boilerplate
